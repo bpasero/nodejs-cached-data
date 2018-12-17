@@ -12,7 +12,7 @@ if (fs.existsSync(CACHE_FILE)) {
 
 const now = Date.now();
 const script = new vm.Script(fs.readFileSync('typescript.js').toString('utf8'), options);
-console.log((Date.now() - now) + "ms");
+console.log("Loading script took: " + (Date.now() - now) + "ms");
 
 if (script.cachedDataProduced) {
     fs.writeFileSync(CACHE_FILE, script.cachedData);
