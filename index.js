@@ -1,7 +1,7 @@
 const vm = require("vm");
 const fs = require("fs");
 
-const CACHE_FILE = 'cache.code';
+const CACHE_FILE = 'cache.code.' + process.version;
 
 let options;
 if (fs.existsSync(CACHE_FILE)) {
